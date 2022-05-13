@@ -25,12 +25,12 @@ connection.once("open", () => {
   console.log("Mongo DB connected..!!");
 });
 
-// const deliverDetails = require("./Routes/deliverRoute");
-// app.use("/deliverDetails", deliverDetails);
+const deliverDetails = require("./Routes/deliverRoutes");
+app.use("/deliverDetails", deliverDetails);
 
-// const locationDetails = require("./Routes/locationRoute");
-// app.use("/locationDetails", locationDetails);
+const locationDetails = require("./Routes/locationRoute");
+app.use("/locationDetails", locationDetails);
 
 app.listen(port, () => {
-  console.log("Connected to port");
+  console.log("Connected to port",port);
 });
