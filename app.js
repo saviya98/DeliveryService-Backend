@@ -9,7 +9,8 @@ app.use(cors());
 app.use(bodyParser.json({ extended: false }));
 
 const PORT = process.env.PORT || 5000;
-const url = process.env.SHOPPING_MONGO_DB;
+// const url = process.env.SHOPPING_MONGO_DB;
+const url = 'mongodb+srv://afassignment:afAssignment123@assignmentcluster.nk6a6.mongodb.net/ShoppingApp_Delivery?retryWrites=true&w=majority';
 
 try {
   mongoose.connect(url, {
