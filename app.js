@@ -24,7 +24,7 @@ try {
   //Exit Process with failure
   process.exit(1);
 }
-app.get("/", (req, res) => res.send("Delivery Service API Running..."));
+app.get("/", (req, res) => res.send("Delivery Service API Running on CICD..."));
 
 const deliverDetails = require("./Routes/deliverRoutes");
 app.use("/deliverDetails", deliverDetails);
