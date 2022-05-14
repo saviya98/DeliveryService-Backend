@@ -25,7 +25,7 @@ spec:
         app: delivery-service
     spec:
       containers:
-      - image: sxvi98/delivery-service:cc01584312e9513b42d65b7714d4bc71335d72d5
+      - image: sxvi98/delivery-service:{{tag}}
         imagePullPolicy: IfNotPresent
         name: delivery-service
         resources: {}
