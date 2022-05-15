@@ -28,6 +28,12 @@ jobs:
     - name: Update config files in k8s
       run: sed -i.bak 's/{{tag}}/${{ github.sha }}/g' k8s/deploy.yaml && rm k8s/*.bak
     - uses: actions-hub/kubectl@master
+
+  Deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
     - name: Deploy to GKE cluster
       uses: ameydev/gke-kubectl-action@master
       env:
